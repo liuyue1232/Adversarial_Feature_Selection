@@ -1,0 +1,10 @@
+sphinx >= 2.1.2, < 3
+sphinx_rtd_theme >= 0.5
+m2r
+numpydoc < 1.1
+matplotlib
+ipython
+pandoc
+nbsphinx
+nbsphinx-link
+pygments>=2.4.1
