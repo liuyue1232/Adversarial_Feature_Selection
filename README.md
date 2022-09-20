@@ -21,7 +21,7 @@ In this paper, the AT based feature selection framework is proposed. We  discuss
 
 ## Acknowledgement
 
-Participants:: LI-DATA Lab; Professor Yun Li, Ph.D, KeJi Han, Ph.D , zhangwenqiong, Ph.D; 
+Participants:: LI-DATA Lab; Professor Yun Li, Ph.D, KeJi Han, Ph.D , WenQiong Zhang, Ph.D; 
 
 Referencing to the following projects:
 
