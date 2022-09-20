@@ -94,27 +94,27 @@ if __name__ == '__main__':
     width = total_width / n
     x = [0, 1, 2, 3, 4]
 
-    a_1 = plt.bar(x, SRT_norm_Lasso, width=width, label='Lasso', fc='violet', hatch = '+')
+    a_1 = plt.bar(x, SRT_norm_Lasso, width=width, label='ℓ1', fc='violet', hatch = '+')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    b_1 = plt.bar(x, SRT_adv_Lasso, width=width,  label='Lasso AT', fc='blue', hatch = '+')
+    b_1 = plt.bar(x, SRT_adv_Lasso, width=width,  label='AT-in-processing-form1-ℓ1', fc='blue', hatch = '+')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    c_1 = plt.bar(x, SRT_combine_Lasso, width=width, label='Lasso NT+AT', fc='lightgreen', hatch = '+')
+    c_1 = plt.bar(x, SRT_combine_Lasso, width=width, label='AT-in-processing-form2-ℓ1', fc='lightgreen', hatch = '+')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    a_2 = plt.bar(x, SRT_norm_Ridge, width=width, label='Ridge', fc='tomato', hatch = '||')
+    a_2 = plt.bar(x, SRT_norm_Ridge, width=width, label='ℓ2', fc='tomato', hatch = '||')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    b_2 = plt.bar(x, SRT_adv_Ridge, width=width, tick_label=name, label='Ridge AT', fc='r', hatch = '||')
+    b_2 = plt.bar(x, SRT_adv_Ridge, width=width, tick_label=name, label='AT-in-processing-form1-ℓ2', fc='r', hatch = '||')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    c_2 = plt.bar(x, SRT_combine_Ridge, width=width, label='Ridge NT+AT', fc='turquoise', hatch = '||')
+    c_2 = plt.bar(x, SRT_combine_Ridge, width=width, label='AT-in-processing-form2-ℓ2', fc='turquoise', hatch = '||')
     for i in range(len(x)):
         x[i] = x[i] + width
 
@@ -122,11 +122,11 @@ if __name__ == '__main__':
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    b_3 = plt.bar(x, SRT_adv_RFE, width=width, label='RFE AT', fc='m', hatch = '-')
+    b_3 = plt.bar(x, SRT_adv_RFE, width=width, label='AT-post-processing-form1-RFE', fc='m', hatch = '-')
     for i in range(len(x)):
         x[i] = x[i] + width
 
-    c_3 = plt.bar(x, SRT_combine_RFE, width=width, label='RFE NT+AT', fc='salmon', hatch = '-')
+    c_3 = plt.bar(x, SRT_combine_RFE, width=width, label='AT-post-processing-form2-RFE', fc='salmon', hatch = '-')
     for i in range(len(x)):
         x[i] = x[i] + width
 

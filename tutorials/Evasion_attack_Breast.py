@@ -221,24 +221,24 @@ for t in range(len(dmax)):
         # selector = RFE(estimator, n_features_to_select=15, step=1)
         # selector = selector.fit(X, y)
         # w_randomForest = selector.ranking_
-        # w_randomForest = fisher_score.fisher_score(X, y) #fisher_score
+        w_randomForest = fisher_score.fisher_score(X, y) #fisher_score
         #
         # # 正常样本特征选择
         # rf.fit(X, y)
         # w_randomForest = rf.feature_importances_ #rf
         # w_randomForest = rf.coef_ #Lasso
-        # key = [i for i in range(X.shape[1])]
-        # score_inial = dict(map(lambda x, y: [x, y], key, w_randomForest))
+        key = [i for i in range(X.shape[1])]
+        score_inial = dict(map(lambda x, y: [x, y], key, w_randomForest))
         # print("score_inial:", score_inial)
-        # score_sorted = sorted(score_inial.items(), key=lambda x: x[1], reverse=True)  # RF选出的特征重要性分数 , RFE的reverse=False
+        score_sorted = sorted(score_inial.items(), key=lambda x: x[1], reverse=True)  # RF选出的特征重要性分数 , RFE的reverse=False
         # print("dic3.keys:", score_sorted)
         # 选择20个特征
-        # top_k = 20
-        # RFselec = [i[0] for i in score_sorted][: top_k]
-        # RFselec.sort()
+        top_k = 20
+        RFselec = [i[0] for i in score_sorted][: top_k]
+        RFselec.sort()
         # mrMR
-        selected_features = mrmr_classif(X, y, K = 20)
-        RFselec = selected_features
+        # selected_features = mrmr_classif(X, y, K = 20)
+        # RFselec = selected_features
 
         # LassoNet
         # n_selected = []
@@ -292,9 +292,9 @@ for t in range(len(dmax)):
         y_adv = adv_ds_pgdls_.Y.tondarray()
 
         # mrmr
-        selected_features = mrmr_classif(X_adv, y, K=20)
-        RFselec_adv = selected_features
-        print("RFselec_adv:", RFselec_adv)
+        # selected_features = mrmr_classif(X_adv, y, K=20)
+        # RFselec_adv = selected_features
+        # print("RFselec_adv:", RFselec_adv)
 
         # RFE
         # estimator = SVC(kernel="linear", C=1)
@@ -322,18 +322,18 @@ for t in range(len(dmax)):
         #             RFselec_adv.append(i)
         # print("RFselec_adv:", RFselec_adv)
 
-        # w_randomForest_adv = fisher_score.fisher_score(X_adv, y)  # fisher_score
+        w_randomForest_adv = fisher_score.fisher_score(X_adv, y)  # fisher_score
         # rf_adv.fit(X_adv, y)
         # w_randomForest_adv = rf_adv.feature_importances_
         # w_randomForest_adv = rf_adv.coef_
-        # key = [i for i in range(X_adv.shape[1])]
-        # score_inial = dict(map(lambda x, y: [x, y], key, w_randomForest_adv))
-        # score_sorted = sorted(score_inial.items(), key=lambda x: x[1], reverse=True)  # RF选出的特征重要性分数 , RFE的reverse=False
+        key = [i for i in range(X_adv.shape[1])]
+        score_inial = dict(map(lambda x, y: [x, y], key, w_randomForest_adv))
+        score_sorted = sorted(score_inial.items(), key=lambda x: x[1], reverse=True)  # RF选出的特征重要性分数 , RFE的reverse=False
         # 选择20个特征
-        # top_k = 20
-        # RFselec_adv = [i[0] for i in score_sorted][: top_k]
-        # RFselec_adv.sort()
-        # print("RFselec_adv:", RFselec_adv)
+        top_k = 20
+        RFselec_adv = [i[0] for i in score_sorted][: top_k]
+        RFselec_adv.sort()
+        print("RFselec_adv:", RFselec_adv)
 
         # 没有逃避攻击
         X_train_feature_selection_rf = X_adv[:, RFselec_adv]
