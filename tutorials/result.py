@@ -39,25 +39,25 @@ acc_fs_rf_avg_6        = [0.8851982618142316, 0.8779467680608365, 0.879168929929
 acc_fs_rf_adv_avg_6    = [0.8851982618142316, 0.8778381314502989, 0.8799837045084195, 0.8737914177077675, 0.8431558935361216, 0.8427756653992393]
 
 
-# plt.xlim(0, 2.5)
-# plt.ylim(0, 1)  # 坐标刻度
-# ln1, = plt.plot(attack_length, acc_fs_rf_avg_1, color='green', marker="<",label = "random Forest")
-# ln2, = plt.plot(attack_length, acc_fs_rf_adv_avg_1, color='green', linestyle='--', marker=">", label = "random Forest + PGD_AT")
-# ln3, = plt.plot(attack_length, acc_fs_rf_avg_2, color='b', marker="<",label = "Lasso")
-# ln4, = plt.plot(attack_length, acc_fs_rf_adv_avg_2, color='b', linestyle='--',marker=">", label = "Lasso + PGD_AT")
-# ln5, = plt.plot(attack_length, acc_fs_rf_avg_3, color='r', marker="<",label = "Ridge")
-# ln6, = plt.plot(attack_length, acc_fs_rf_adv_avg_3, color='r', linestyle='--', marker=">", label = "Ridge + PGD_AT")
-# ln7, = plt.plot(attack_length, acc_fs_rf_avg_4, color='c', marker="<",label = "RFE")
-# ln8, = plt.plot(attack_length, acc_fs_rf_adv_avg_4, color='c', linestyle='--', marker=">", label = "RFE + PGD_AT")
-# ln9, = plt.plot(attack_length, acc_fs_rf_avg_5, color='m', marker="<",label = "Fisher score")
-# ln10, = plt.plot(attack_length, acc_fs_rf_adv_avg_5, color='m', linestyle='--', marker=">", label = "Fisher score + PGD_AT")
-# ln11, = plt.plot(attack_length, acc_fs_rf_avg_6, color='y', marker="<",label = "mrMR")
-# ln12, = plt.plot(attack_length, acc_fs_rf_adv_avg_6, color='y', linestyle='--', marker=">", label = "mrMR + PGD_AT")
-# plt.legend()
-# plt.title("Accuracy")  # 设置标题及字体
-# plt.ylabel("acc Measure")  # 设置标题及字体
-# plt.xlabel('pdg-Perturbation(Attack Strengh)')
-# plt.show()
+plt.xlim(0, 2.5)
+plt.ylim(0, 1)  # 坐标刻度
+ln1, = plt.plot(attack_length, acc_fs_rf_avg_1, color='green', marker="<",label = "random Forest")
+ln2, = plt.plot(attack_length, acc_fs_rf_adv_avg_1, color='green', linestyle='--', marker=">", label = "random Forest + PGD_AT")
+ln3, = plt.plot(attack_length, acc_fs_rf_avg_2, color='b', marker="<",label = "Lasso")
+ln4, = plt.plot(attack_length, acc_fs_rf_adv_avg_2, color='b', linestyle='--',marker=">", label = "Lasso + PGD_AT")
+ln5, = plt.plot(attack_length, acc_fs_rf_avg_3, color='r', marker="<",label = "Ridge")
+ln6, = plt.plot(attack_length, acc_fs_rf_adv_avg_3, color='r', linestyle='--', marker=">", label = "Ridge + PGD_AT")
+ln7, = plt.plot(attack_length, acc_fs_rf_avg_4, color='c', marker="<",label = "RFE")
+ln8, = plt.plot(attack_length, acc_fs_rf_adv_avg_4, color='c', linestyle='--', marker=">", label = "RFE + PGD_AT")
+ln9, = plt.plot(attack_length, acc_fs_rf_avg_5, color='m', marker="<",label = "Fisher score")
+ln10, = plt.plot(attack_length, acc_fs_rf_adv_avg_5, color='m', linestyle='--', marker=">", label = "Fisher score + PGD_AT")
+ln11, = plt.plot(attack_length, acc_fs_rf_avg_6, color='y', marker="<",label = "mrMR")
+ln12, = plt.plot(attack_length, acc_fs_rf_adv_avg_6, color='y', linestyle='--', marker=">", label = "mrMR + PGD_AT")
+plt.legend()
+plt.title("Accuracy")  # 设置标题及字体
+plt.ylabel("acc Measure")  # 设置标题及字体
+plt.xlabel('pdg-Perturbation(Attack Strengh)')
+plt.show()
 # plt.xlim(0, 2.5)
 # plt.ylim(0, 1)  # 坐标刻度
 # ln13, = plt.plot(attack_length, acc_fs_stability_1, color='pink', marker="^", label = "random Forest stability")
@@ -79,15 +79,15 @@ acc_fs_rf_adv_avg_6    = [0.8851982618142316, 0.8778381314502989, 0.879983704508
 # plt.show()
 
 
-name_list_rob = [acc_fs_rf_avg_1, acc_fs_rf_avg_2, acc_fs_rf_avg_3, acc_fs_rf_avg_4, acc_fs_rf_avg_5, acc_fs_rf_avg_6]
-name_list_rob_pgd = [acc_fs_rf_adv_avg_1, acc_fs_rf_adv_avg_2, acc_fs_rf_adv_avg_3, acc_fs_rf_adv_avg_4, acc_fs_rf_adv_avg_5, acc_fs_rf_adv_avg_6]
-method_name_list = ["Random Forest", "Lasso", "Ridge", "RFE", "Fisher score", "mrMR"]
-for u, v in enumerate(name_list_rob):
-    for i, j in enumerate(name_list_rob[u]):
-        print(method_name_list[i], "%.2f" % j)
-    print("\n")
-
-for u, v in enumerate(name_list_rob_pgd):
-    for i, j in enumerate(name_list_rob[u]):
-        print(method_name_list[i], "+ PGD-AT", "%.2f" % j)
-    print("\n")
+# name_list_rob = [acc_fs_rf_avg_1, acc_fs_rf_avg_2, acc_fs_rf_avg_3, acc_fs_rf_avg_4, acc_fs_rf_avg_5, acc_fs_rf_avg_6]
+# name_list_rob_pgd = [acc_fs_rf_adv_avg_1, acc_fs_rf_adv_avg_2, acc_fs_rf_adv_avg_3, acc_fs_rf_adv_avg_4, acc_fs_rf_adv_avg_5, acc_fs_rf_adv_avg_6]
+# method_name_list = ["Random Forest", "Lasso", "Ridge", "RFE", "Fisher score", "mrMR"]
+# for u, v in enumerate(name_list_rob):
+#     for i, j in enumerate(name_list_rob[u]):
+#         print(method_name_list[i], "%.2f" % j)
+#     print("\n")
+#
+# for u, v in enumerate(name_list_rob_pgd):
+#     for i, j in enumerate(name_list_rob[u]):
+#         print(method_name_list[i], "+ PGD-AT", "%.2f" % j)
+#     print("\n")
