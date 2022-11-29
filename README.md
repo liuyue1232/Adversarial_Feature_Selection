@@ -12,9 +12,13 @@ In this paper, the AT based feature selection framework is proposed. We  discuss
 
 <img width="387" alt="image" src="https://user-images.githubusercontent.com/25686002/191309602-8fffbb68-7741-4f8f-a698-8ddb3c39baac.png" align="middle">
 
+<img width="354" alt="image" src="https://user-images.githubusercontent.com/25686002/204499411-2b926e5a-8aa5-4a11-95be-03c2c0e344f6.png">
+
 <img width="354" alt="image" src="https://user-images.githubusercontent.com/25686002/204499077-78b9ee3c-ca64-446c-b7f0-78050256d993.png">
 
 <img width="404" alt="image" src="https://user-images.githubusercontent.com/25686002/191309710-48aa04a8-48f0-435e-bc51-fd15fa1e166d.png" align="middle">
+
+<img width="356" alt="image" src="https://user-images.githubusercontent.com/25686002/204499483-e1a0d648-1623-470b-8dbf-e94db1b3658b.png">
 
 <img width="363" alt="image" src="https://user-images.githubusercontent.com/25686002/204499179-ed45b0b9-1c09-4621-a6df-4de03669f66c.png">
 
