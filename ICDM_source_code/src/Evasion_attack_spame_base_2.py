@@ -148,7 +148,7 @@ noise_type = 'l2'  # Type of perturbation 'l1' or 'l2'
 dmax = [1.5]
 selected_feature_number = [20]
 acc_selected_features_pgd_rf = []
-lb, ub = 0, 1  # Bounds of the attack space. Can be set to `None` for unbounded
+lb, ub = tr.X.min(), tr.X.max() # Bounds of the attack space. Can be set to `None` for unbounded
 y_target = None  # None if `error-generic` or a class label for `error-specific`
 
 # Should be chosen depending on the optimization problem
